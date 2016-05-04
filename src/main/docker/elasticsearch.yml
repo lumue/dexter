@@ -1,0 +1,10 @@
+version: '2'
+services:
+    dexter-elasticsearch:
+        container_name: dexter-elasticsearch
+        image: elasticsearch:1.7.5
+        # volumes:
+        #     - ~/volumes/jhipster/dexter/elasticsearch/:/usr/share/elasticsearch/data/
+        ports:
+            - 9200:9200
+            - 9300:9300

@@ -1,0 +1,62 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "properties",
+      "otherEntityName": "namedProperty",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "file"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "path",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "hash",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "created",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "lastmodified",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "lastseen",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "firstseen",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": [
+        "required"
+      ]
+    }
+  ],
+  "changelogDate": "20160504203317",
+  "dto": "mapstruct",
+  "pagination": "infinite-scroll",
+  "service": "serviceClass"
+}

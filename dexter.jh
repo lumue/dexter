@@ -1,0 +1,43 @@
+
+entity File {
+	path String required,
+	hash String,
+    created ZonedDateTime required,
+    lastmodified ZonedDateTime required,
+    lastseen ZonedDateTime required,
+    firstseen ZonedDateTime required
+}
+
+entity NamedProperty {
+	name String required,
+	value String required
+}
+
+entity Document{
+	name String,
+    type MediaType
+}
+
+enum MediaType {
+    TEXT, AUDIO, VIDEO, BINARY
+}
+
+relationship OneToOne {
+	Document{file} to File
+}
+
+relationship OneToMany {
+	File{properties} to NamedProperty
+}
+
+relationship OneToMany {
+	Document{properties} to NamedProperty
+}
+paginate Document, File with infinite-scroll
+
+dto Document, File with mapstruct
+
+service Document,File with serviceClass
+
+
+	
